@@ -59,7 +59,7 @@ Overall stability of the BERT architectures as well as specific examples taken f
 
 ## Next Steps
 
-In summary we presented a total of 7 models (2 Baselines, 2 RNNs, 3 BERTs). (commentary about baseline here). Future steps to address the issues presented in the models (for robustness's sake) described above could include:
+In summary we presented a total of 7 models (2 Baselines, 2 RNNs, 3 BERTs). Future steps to address the issues presented in the models (for robustness's sake) described above could include:
 
 1. Identifying and minimizing gender bias in the dataset by assuring equal representation of male and female characters in reviews.
 2. Using additional regularization approaches to combat overfitting, such as L1 or L2 regularization, or modifying the dropout rate.
