@@ -40,9 +40,9 @@ Firstly, we tested those different pre-trained models and found that the one wit
 
 |Scoring    |  Baseline |   RNN    |  BERT   |
 |  :-----:  | :-----:   | :-----:  | :-----: |            
-|Recall     |   00.00   |  82.10   |  83.26  |
-|Precision  |   00.00   |  89.88   |  89.10  |
-|F1         |   00.00   |  86.43   |  86.08  |
+|Recall     |   71.31   |  82.10   |  83.26  |
+|Precision  |   73.22   |  89.88   |  89.10  |
+|F1         |   72.25   |  86.43   |  86.08  |
 
 Starting from the Baseline, as the notebook shows; metrics from the non ML approach (Logistic Regression) evidence an exceedingly high naïve accuracy given the data. This may be due to multiple reasons:
 - In accordance with econometric fundamentals, adding regressors artificially inflates the predictive power whilst not necessarily being statistically significant information.
