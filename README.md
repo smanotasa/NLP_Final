@@ -19,7 +19,9 @@ The dataset used in this project is the IMDb Movie Review dataset, which is avai
 
 ### Baseline
 
-We have included 2 instances for a Baseline estimation. The first one, takes as input a list of texts and two basic dictionaries containing positive and negative words. It then counts the occurrences of the words in the dictionaries in each text and uses these counts to predict the sentiment of the review as either positive, negative, or neutral. Secondly, using TF-IDF we define a new set of dictionaries for the binary objective with words that adjectivize sentimients in order to improve the performance of the model. 
+We have included 2 instances for a Baseline estimation. The first one, takes as input a list of texts and two basic dictionaries containing positive and negative words. It then counts the occurrences of the words in the dictionaries in each text and uses these counts to predict the sentiment of the review as either positive, negative, or neutral. Using TF-IDF vectorizer we define a new set of dictionaries to include more words related to positive and negative reviews.
+
+Secondly, we define a model combining TF-IDF vectorizer and Logistic Regression model. With the TF-IDF the text is converted into numerical feature representation, tokenizing, counting the occurrences and weighting each token. Once the features have been extracted, a LogisticRegression classifier is trained on the transformed data. 
 
 ### RNN
 The TensorFlow RNN model implemented is a text classification model that uses a recurrent neural network (**RNN**) to classify movie reviews as either positive or negative. The model uses the TensorFlow framework and Keras API to build and train a sequence model that processes text data in a sequence and outputs a binary classification. The model preprocesses the text data by tokenizing, padding, and embedding the sequences of words, and then feeds them into a bidirectional LSTM layer followed by a dense output layer with sigmoid activation function to produce the classification result. The model is trained on a labeled dataset of movie reviews, and evaluated on a test dataset to measure its accuracy.
