@@ -34,6 +34,21 @@ Firstly, we tested those different pre-trained models and found that the one wit
 
 ## Models Comparison
 
+|Scoring    |  Baseline |   RNN    |  BERT   |
+|Recall     |   00.00   |  82.10   |  83.26  |
+|Precision  |   00.00   |  89.88   |  89.10  |
+|F1         |   00.00   |  86.43   |  86.08  |
+
 
 ## Next Steps
+
+In summary we presented a total of 7 models (2 Baselines, 2 RNNs, 3 BERTs). (commentary about baseline here).
+
+The second RNN model, with additional LSTM layers and dropout; demonstrated better overall performance compared to the first model. However, both models exhibited gender bias in predictions; performing better on reviews male-centric commentaries. Additionally, the second model showed signs of overfitting, as evidenced by the increasing validation loss while the training loss continued to decrease. Future steps to address these issues could include and make the RNN more robust:
+
+1. Identifying and minimizing gender bias in the dataset by assuring equal representation of male and female characters in reviews.
+2. Using additional regularization approaches to combat overfitting, such as L1 or L2 regularization, or modifying the dropout rate.
+3. If necessary, simplify the model architecture to increase generalization to unknown data.
+4. Using approaches such as GridSearch to determine the best combination of parameters for the problem, (hyperparameter tuning).
+5. Using cross-validation to provide a more rigorous evaluation of model performance and early detection of overfitting.
 
