@@ -19,7 +19,7 @@ The dataset used in this project is the IMDb Movie Review dataset, which is avai
 
 ### Baseline
 
-We have included 2 instances for a Baseline estimation. The first one, takes as input a list of texts and two basic dictionaries containing positive and negative words. It then counts the occurrences of the words in the dictionaries in each text and uses these counts to predict the sentiment of the review as either positive, negative, or neutral. Using TF-IDF vectorizer we define a new set of dictionaries to include more words related to positive and negative reviews.
+We have included 2 instances for a **Baseline** estimation. The first one, takes as input the reviews, which are preprocessed using Regex, and two basic dictionaries containing positive and negative words.  It then counts the occurrences of the words in the dictionaries in each text and uses these counts to predict the sentiment of the review as either positive, negative, or neutral. Using TF-IDF vectorizer we define a new set of dictionaries to include more words related to positive and negative reviews.
 
 Secondly, we define a model combining TF-IDF vectorizer and Logistic Regression model. With the TF-IDF the text is converted into numerical feature representation, tokenizing, counting the occurrences and weighting each token. Once the features have been extracted, a LogisticRegression classifier is trained on the transformed data. 
 
@@ -49,7 +49,7 @@ Starting from the Baseline, as the notebook shows; metrics from the non ML appro
 - Although RNNs and BERTs can capture sequential patterns in text data, the architecture of a Logistic Regression may capture variance given the TF-IDF input.
 - The other models overfit or underfit the data given the complexity we have set out, whereas the Logistic convex optimization with heaps of information may be strong to.
 
-On the other hand, when using a ruled-based model with `spaCy` patterns as the naïve learner, metrics are far lower. This method outputs results more in line with our expectations, being closer to those of a random draw given the complexity of reviews which may be extensive (to those of our more complex orientations).
+On the other hand, when using a ruled-based model with `Regex` patterns as the naïve learner, metrics are far lower. This method outputs results more in line with our expectations, being closer to those of a random draw given the complexity of reviews which may be extensive (to those of our more complex orientations).
 
 Error analysis shows that the final BERT is not predicting well with the more complex examples, paticularly on the last one. However, it is the model with the best performance considering all the metrics, having close similarity to the results from the second RNN. 
 
