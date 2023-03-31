@@ -40,8 +40,8 @@ Firstly, we tested those different pre-trained models and found that the one wit
 
 |Scoring    |  Baseline |   RNN    |  BERT   |
 |  :-----:  | :-----:   | :-----:  | :-----: |            
-|Recall     |   71.31   |  82.10   |  83.26  |
-|Precision  |   73.22   |  89.88   |  89.10  |
+|Recall     |   73.22   |  82.10   |  83.26  |
+|Precision  |   71.31   |  89.88   |  89.10  |
 |F1         |   72.25   |  86.43   |  86.08  |
 
 Starting from the Baseline, as the notebook shows; metrics from the non ML approach (Logistic Regression) evidence an exceedingly high naïve accuracy given the data. This may be due to multiple reasons:
