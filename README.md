@@ -19,6 +19,8 @@ The dataset used in this project is the IMDb Movie Review dataset, which is avai
 
 ### Baseline
 
+We have included 2 instances for a Baseline estimation. The first one, constructs a Logistic Regression with regressors being the TF-IDF contents over the whole set of observations. This effectively passes on as input a vast amount of information, which is as extensive as the reviews' word usage. Secondly, we define a set of dictionaries for the binary objective with words that adjectivize good and sentimients. Furthermore, with the goal of maintaining part of TF-IDF usage, the disaggregated dictionaries can be expanded upon with top terms from both subsets of data (label=1 and label=0).
+
 ### RNN
 The TensorFlow RNN model implemented is a text classification model that uses a recurrent neural network (**RNN**) to classify movie reviews as either positive or negative. The model uses the TensorFlow framework and Keras API to build and train a sequence model that processes text data in a sequence and outputs a binary classification. The model preprocesses the text data by tokenizing, padding, and embedding the sequences of words, and then feeds them into a bidirectional LSTM layer followed by a dense output layer with sigmoid activation function to produce the classification result. The model is trained on a labeled dataset of movie reviews, and evaluated on a test dataset to measure its accuracy.
 
@@ -41,11 +43,11 @@ Firstly, we tested those different pre-trained models and found that the one wit
 |F1         |   00.00   |  86.43   |  86.08  |
 
 Starting from the Baseline, as the notebook shows; metrics from the non ML approach (Logistic Regression) evidence an exceedingly high naïve accuracy given the data. This may be due to multiple reasons:
-- The amount of regressors being used is as big as the TF-IDF provides. In accordance with econometric fundamentals, adding regressors artificially inflates the predictive power whilst not necessarily being statistically significant information.
+- In accordance with econometric fundamentals, adding regressors artificially inflates the predictive power whilst not necessarily being statistically significant information.
 - Although RNNs and BERTs can capture sequential patterns in text data, the architecture of a Logistic Regression may capture variance given the TF-IDF input.
 - The other models overfit or underfit the data given the complexity we have set out, whereas the Logistic convex optimization with heaps of information may be strong to.
 
-On the other hand, when using a ruled-based model with `spaCy` patterns as the naïve learner, metrics are far lower. We define a set of dictionaries for the binary objective with words that adjectivize good and sentimients. Furthermore, with the goal of maintaining part of TF-IDF usage, the disaggregated dictionaries can be expanded upon with top terms from both subsets of data (label=1 and label=0). This method outputs metrics more in line with our expectations, being lower than our more complex orientations.
+On the other hand, when using a ruled-based model with `spaCy` patterns as the naïve learner, metrics are far lower. This method outputs results more in line with our expectations, being closer to those of a random draw given the complexity of reviews which may be extensive (to those of our more complex orientations).
 
 Error analysis shows that the final BERT is not predicting well with the more complex examples, paticularly on the last one. However, it is the model with the best performance considering all the metrics, having close similarity to the results from the second RNN. 
 
