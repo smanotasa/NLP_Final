@@ -35,6 +35,7 @@ Firstly, we tested those different pre-trained models and found that the one wit
 ## Models Comparison
 
 |Scoring    |  Baseline |   RNN    |  BERT   |
+|  :-----:  | :-----:   | :-----:  | :-----: |            
 |Recall     |   00.00   |  82.10   |  83.26  |
 |Precision  |   00.00   |  89.88   |  89.10  |
 |F1         |   00.00   |  86.43   |  86.08  |
